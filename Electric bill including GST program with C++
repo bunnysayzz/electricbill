@@ -1,0 +1,45 @@
+#include<stdio.h> 
+ int main(){ 
+ int a;                             /*Last month's meter readings*/ 
+ int b;                            /*Current meter's reading*/ 
+ int c;                             /*Total consumed unit*/ 
+    float d;                            /* amount of unit*/ 
+    float e;                               /* GST 2.5%  amount*/ 
+    float f;                    /* GST 2.5%  amount + amount of unit*/ 
+    float g;                     /* meter charge*/ 
+    float s;                     /* totalbill= f+g */ 
+  
+     
+     
+    printf("Enter last month's meter readings:"); 
+ scanf("%d", &a); 
+  
+ printf("Current meter readings is:"); 
+ scanf("%d", &b); 
+ printf("Enter meter charge:"); 
+ scanf("%f" ,&g); 
+  
+  
+ c= b-a ; 
+ printf("Total consumed unit is %d",c); 
+ if(c<=150){ 
+  d= c*4.56; 
+   
+ } 
+    if (c>=300){ 
+  d=(100*4.56+ c- 100)*7.54; 
+   
+ 
+ } 
+ printf("\nAmount of unit: %2f",d); 
+  
+ e= (0.025*d); 
+ printf("\nGSTof totalamount:%2f ",e); 
+ f= e+d; 
+ s= f+g; 
+ printf("\nTotal bill along with charges : %2f",s); 
+  
+  
+    return 0; 
+}
+
